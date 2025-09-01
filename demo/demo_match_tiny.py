@@ -8,6 +8,11 @@ from romatch.utils.utils import tensor_to_pil
 
 from romatch import tiny_roma_v1_outdoor
 
+import matplotlib.pyplot as plt
+import matplotlib 
+
+matplotlib.use('TkAgg')
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 if torch.backends.mps.is_available():
     device = torch.device('mps')
@@ -29,6 +34,9 @@ if __name__ == "__main__":
 
     # Match
     warp, certainty1 = roma_model.match(im1_path, im2_path)
+    
+    #roma_model.to('cpu')
+    #orch.cuda.empty_cache()
     
     h1, w1 = warp.shape[:2]
     
@@ -73,5 +81,11 @@ if __name__ == "__main__":
     vis_im1 = certainty1 * x1 + (1 - certainty1) * white_im1
     vis_im2 = certainty2 * x2 + (1 - certainty2) * white_im2
     
-    tensor_to_pil(vis_im1, unnormalize=False).save(args.save_A_path)
-    tensor_to_pil(vis_im2, unnormalize=False).save(args.save_B_path)
+    plt.figure()
+    plt.imshow(vis_im1.cpu().numpy().transpose((1,2,0)))
+    plt.figure()
+    plt.imshow(vis_im2.cpu().numpy().transpose((1,2,0)))
+    plt.show()
+    
+    #tensor_to_pil(vis_im1, unnormalize=False).save(args.save_A_path)
+    #tensor_to_pil(vis_im2, unnormalize=False).save(args.save_B_path)
