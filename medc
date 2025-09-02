@@ -1,0 +1,67 @@
+[33m93f0981[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m My local updates
+[33m83e4436[m Resolved merge conflict in RoMa.
+[33m9078fd2[m Adjusted RoMa scripts.
+[33medd1b8b[m fix indent issue
+[33m7906fb2[m bump version
+[33m45c1129[m update kpt matching
+[33m64f20c7[m add some checks for image type in match
+[33m63f4c9f[m comment out xformer warning
+[33m3701174[m silence xformers warning, should also update to torch native attn flash, but lazy
+[33mef22a09[m cuda default device for eval
+[33m0e50b44[m Add option in matcher to directly accept PIL images or image paths (#73)
+[33m905ff76[m add TinyRoma example (#61)
+[33m90ee1bf[m add mps example
+[33m066d4fe[m make it run on mps (?)
+[33me658800[m fix bug in approx softmax
+[33mcdea84f[m fix annoying meshgrid warnings, hopefully without introducing bugs
+[33mf2ec3de[m make sure to reread image for upsample_preds
+[33mf267448[m remove some unneeded imports
+[33m409eb1a[m Bugwarning
+[33mc6c61df[m revert eval to use opencv ransac as default
+[33m7541bd4[m remove :... stuff from device in get_autocast_params, autocast doesnt like (#57)
+[33m82a3396[m Fix autocast on cpu; fix weight download path (#51)
+[33m0a733b9[m rename: roma -> romatch (#50)
+[33m36389ef[m feat: handle pillow images as input (#35)
+[33m2d869bb[m fix: line order in RobustLoss (#44)
+[33m884d991[m Update README.md
+[33ma33a2d6[m update kde
+[33m823d132[m update tiny roma
+[33m61b0bb9[m update results
+[33me939f35[m Tiny roma v1 (#41)
+[33md84777f[m add confidence alternative
+[33md5adf65[m Update README.md
+[33mf6d664b[m Merge pull request #31 from dgcnz/feat/amp_dtype
+[33m2f0b70f[m Merge pull request #33 from Dawars/grayscale
+[33mfb585b7[m Make it work with grayscale images
+[33m3fc8902[m feat: add option for mixed precision dtype to enable running on cpus
+[33m5052229[m Update README.md
+[33m87ec1f9[m Update README.md
+[33m756e98e[m Update train_roma_outdoor.py
+[33mca2615f[m Merge pull request #20 from Parskatt/dev
+[33ma29f1ad[m use scaled intrinsics for compat with paper results.
+[33md9b2f01[m fix so roma_outdoor/indoor uses balanced sampling by default
+[33m9d87f00[m wip
+[33m69cefb1[m Merge pull request #10 from qkqhd222/main
+[33m7d731a5[m Update README.md
+[33md743898[m some updates to api and add demo image pair and 3D effect demo
+[33m010a2b4[m Update README.md
+[33m0c95cd2[m Update README.md
+[33mff8d98a[m Update README.md
+[33m154175c[m update keypoint matching with roma
+[33ma274747[m Update local_correlation.py
+[33m0263a81[m Update matcher.py
+[33mb1ced96[m Update setup.py
+[33mb88d455[m Update setup.py
+[33m1f03ab9[m Update LICENSE
+[33mee07dee[m Update README.md
+[33mf1ad12d[m Update README.md
+[33m7f8b2e4[m Merge pull request #3 from Parskatt/2-unexpected-floating-scalartype-in-atautocastprioritize
+[33me5751d8[m remove hardcoded .half casts and bf16
+[33m4aa8c27[m wip recrop at upsample
+[33md25d21e[m add simple visualization to model
+[33md08585c[m add simple method to match keypoints with roma
+[33m239b220[m Update README.md
+[33me47888b[m Create LICENSE
+[33maaf2d16[m Update README.md
+[33m3e9d971[m initial commit
+[33m6c71d62[m Initial commit
